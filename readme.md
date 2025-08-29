@@ -3,9 +3,7 @@
 ### getElementById
 - Selects an element by its **id**.
 - Returns only **one element** (or `null` if not found).
-- Example:
-  ```js
-  const title = document.getElementById("main-title");
+
 
 
 
@@ -16,16 +14,12 @@
 - Returns an HTMLCollection (like an array but not exactly).
 
 - It is live, meaning if new elements with that class are added later, the collection updates automatically.
-- Example:
-  ```js
-  const items = document.getElementsByClassName("card");
+
 
 ## querySelector
 
 - Selects the first element that matches a CSS selector.
-- Example:
-  ```js
-  const firstCard = document.querySelector(".card.active");
+
 
 
 ### querySelectorAll
@@ -33,9 +27,6 @@
 - Selects all elements that match a CSS selector.
 
 - Returns a NodeList (static, does not update automatically).
-- Example:
-  ```js
-  const allCards = document.querySelectorAll(".card");
 
 
 ## Q2: How to Create and Insert a New Element into the DOM
@@ -47,11 +38,9 @@ In JavaScript, you can create and insert a new element into the DOM in a few sim
 ## Step 1: Create the element
 Use the method `document.createElement()` to create a new HTML element.
 
-```js
-const newDiv = document.createElement("div");
+---
 
-
-Step 2: Insert into the DOM
+## Step 2: Insert into the DOM
 
 Finally, attach the element to an existing parent node using methods like:
 
@@ -62,7 +51,7 @@ prepend() → Adds as the first child.
 append() → Similar to appendChild but can add multiple nodes or text.
 
 insertBefore() → Inserts before a specific node.
-
+<hr>
 
 ## Q3: What is Event Bubbling and How Does it Work?
 
