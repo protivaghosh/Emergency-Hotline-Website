@@ -6,6 +6,8 @@
     <!--daisy ui cdn-->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Emergency-Hotline</title>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
 </head>
@@ -17,13 +19,13 @@
                 <h2 class="text-xl font-bold text-green-700">Emergency<br> Service</h2>
             </div>
             <div>
-                <button class="btn rounded-full bg-green-100">0<img class="w-6 h-6" src="./assets/heart.png" alt=""></button>
-                <button class="btn rounded-full bg-green-100">100<img class="w-6 h-6" src="./assets/coin.png" alt=""></button>
-                <button class="btn rounded-full bg-green-700 text-white"><span>0</span> Copy</button>
+                <button id="heartBtn" class="btn rounded-full bg-green-100">0<img class="w-6 h-6" src="./assets/heart.png" alt=""></button>
+                <button id="coinBtn" class="btn rounded-full bg-green-100">100<img class="w-6 h-6" src="./assets/coin.png" alt=""></button>
+                <button id="copyBtn" class="btn rounded-full bg-green-700 text-white"><span>0</span> Copy</button>
             </div>
         </nav>
     </header>
-    <main>
+    <main class="bg-green-100">
         <!--banner section start-->
         <section class="bg-gradient-to-r from-[rgba(1,49,34,1)] via-[rgba(0,103,71,1)] to-[rgba(1,50,35,1)] flex flex-col justify-center items-center py-8">
             <img src="./assets/logo.png" alt="">
@@ -32,12 +34,34 @@
         </section>
         <!--banner section end-->
         <!--card section start-->
-        <section class="grid grid-cols-12 gap-4">
-            <div class="col-span-9"></div>
-            <div class="col-span-3"></div>
+        <section class="grid grid-cols-12 gap-4 bg-green-100 mt-10 w-11/12 mx-auto">
+            <div class="col-span-9">
+                <!--1st card-->
+                <div class="bg-white w-60 py-3 px-4">
+                    <div class="flex justify-between items-center">
+                    <div><img class="w-8 h-8 bg-pink-300 rounded-xl" src="./assets/fire-service.png" alt=""></div>
+                    <div class="heartBtn"><i class="fa-regular fa-heart w-8 h-8"></i></div>
+                    </div>
+                <h2 class="font-bold mt-1">Fire Service Number</h2>
+                <p class="text-gray-400">fire service</p>
+                <h2 class="font-bold mt-4 number">999</h2>
+                <p class="text-gray-400">fire</p>
+                <button class="copyBtn btn btn-outline"><i class="fa-solid fa-copy"></i> Copy</button>
+                <button class="callBtn btn btn-outline bg-green-700 text-white" data-name="Fire Service" data-number="999"><i class="fa-solid fa-phone"></i> Call</button>
+                </div>
+                
+            </div>
+            <div class="col-span-3 bg-white py-4 px-4">
+                <div class="flex justify-between items-center">
+                    <h2 class="font-bold"><i class="fa-solid fa-clock-rotate-left text-gray-500"></i> Call History</h2>
+                    <button id="clearHistory" class="btn bg-green-700 text-white rounded-2xl">Clear</button>
+                </div>
+                 <ul id="historyList" class="mt-4 space-y-2 "></ul>
+            </div>
         </section>
         <!--card section end-->
     </main>
     <footer></footer>
+    <script src="./index.js"></script>
 </body>
 </html>
