@@ -61,3 +61,11 @@ numberEl.className = "text-gray-500";
 clearHistoryBtn.addEventListener("click", () => {
   historyList.innerHTML = "";
   });
+
+  // Heart Buttons
+  document.querySelectorAll(".heartBtn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    hearts++;
+    heartBtn.innerHTML = hearts + `<img class="w-6 h-6" src="./assets/heart.png" alt="">`;
+  });
+});
