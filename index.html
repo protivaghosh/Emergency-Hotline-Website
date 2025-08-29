@@ -13,12 +13,12 @@
 </head>
 <body>
     <header>
-        <nav class="flex justify-between items-center w-11/12 mx-auto py-4">
+        <nav class="flex flex-col sm:flex-row justify-between items-center w-11/12 mx-auto py-4">
             <div class="flex justify-center items-center gap-1">
                 <img class="w-14 h-14" src="./assets/logo.png" alt="">
                 <h2 class="text-xl font-bold text-green-700">Emergency<br> Service</h2>
             </div>
-            <div>
+            <div class="mt-5 sm:mt-0">
                 <button id="heartBtn" class="btn rounded-full bg-green-100">0<img class="w-6 h-6" src="./assets/heart.png" alt=""></button>
                 <button id="coinBtn" class="btn rounded-full bg-green-100">100<img class="w-6 h-6" src="./assets/coin.png" alt=""></button>
                 <button id="copyBtn" class="btn rounded-full bg-green-700 text-white"><span>0</span> Copy</button>
@@ -29,15 +29,15 @@
         <!--banner section start-->
         <section class="bg-gradient-to-r from-[rgba(1,49,34,1)] via-[rgba(0,103,71,1)] to-[rgba(1,50,35,1)] flex flex-col justify-center items-center py-8">
             <img src="./assets/logo.png" alt="">
-            <h2 class="text-4xl text-white font-bold mt-4">Emergency Service Directory</h2>
-            <p class=" text-white font-semibold mt-4">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+            <h2 class="text-xl sm:text-4xl text-white font-bold mt-4">Emergency Service Directory</h2>
+            <p class=" text-white text-sm sm:font-semibold mt-4 text-center">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
         </section>
         <!--banner section end-->
         <!--card section start-->
-        <section class="grid grid-cols-12 gap-4 bg-green-100 mt-10 w-11/12 mx-auto">
-            <div class="col-span-9">
+        <section class="grid grid-cols-1 sm:grid-cols-12 gap-4 bg-green-100 mt-10 w-11/12 mx-auto">
+            <div class="col-span-1 sm:col-span-9">
                 <!--1st card-->
-                <div class="bg-white w-60 py-3 px-4">
+                <div class="bg-white  py-3 px-4">
                     <div class="flex justify-between items-center">
                     <div><img class="w-8 h-8 bg-pink-300 rounded-xl" src="./assets/fire-service.png" alt=""></div>
                     <div class="heartBtn"><i class="fa-regular fa-heart w-8 h-8"></i></div>
@@ -46,12 +46,13 @@
                 <p class="text-gray-400">fire service</p>
                 <h2 class="font-bold mt-4 number">999</h2>
                 <p class="text-gray-400">fire</p>
+                
                 <button class="copyBtn btn btn-outline"><i class="fa-solid fa-copy"></i> Copy</button>
                 <button class="callBtn btn btn-outline bg-green-700 text-white" data-name="Fire Service" data-number="999"><i class="fa-solid fa-phone"></i> Call</button>
                 </div>
                 <!---->
             </div>
-            <div class="col-span-3 bg-white py-4 px-4">
+            <div class="col-span-1 sm:col-span-3 bg-white py-4 px-4">
                 <div class="flex justify-between items-center">
                     <h2 class="font-bold"><i class="fa-solid fa-clock-rotate-left text-gray-500"></i> Call History</h2>
                     <button id="clearHistory" class="btn bg-green-700 text-white rounded-2xl">Clear</button>

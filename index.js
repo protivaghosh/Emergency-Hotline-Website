@@ -6,6 +6,7 @@ let copies = 0;
 const coinBtn = document.getElementById("coinBtn");
 const heartBtn = document.getElementById("heartBtn");
 const copyBtn = document.getElementById("copyBtn");
+
 const historyList = document.getElementById("historyList");
 const clearHistoryBtn = document.getElementById("clearHistory");
 
@@ -68,4 +69,17 @@ clearHistoryBtn.addEventListener("click", () => {
     hearts++;
     heartBtn.innerHTML = hearts + `<img class="w-6 h-6" src="./assets/heart.png" alt="">`;
   });
+});
+
+
+
+// Copy Buttons
+document.querySelectorAll(".copyBtn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const number = btn.parentElement.querySelector(".number").innerText;
+    navigator.clipboard.writeText(number);
+    copies++;
+    copyBtn.innerHTML = `<span>${copies}</span> Copy`;
+    alert(`Copied Number: ${number}`);
+});
 });
