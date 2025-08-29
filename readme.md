@@ -38,7 +38,7 @@
   const allCards = document.querySelectorAll(".card");
 
 
-# Q2: How to Create and Insert a New Element into the DOM
+## Q2: How to Create and Insert a New Element into the DOM
 
 In JavaScript, you can create and insert a new element into the DOM in a few simple steps.
 
@@ -66,19 +66,18 @@ insertBefore() → Inserts before a specific node.
 
 ## Q3: What is Event Bubbling and How Does it Work?
 
-## 📌 Definition
-Event Bubbling is a concept in the DOM (Document Object Model) where an event starts from the **target element** (the element that was actually clicked or interacted with) and then **bubbles up** through its ancestors (parent, grandparent, all the way up to `document`).
+### Definition
+Event Bubbling is a concept in the DOM (Document Object Model) where an event **starts at the target element** (the element that was actually clicked or interacted with) and then **bubbles up** through its parent elements all the way to the `document`.
 
-In other words, when you click on a child element, the event is first handled by that child, then its parent, then the parent of the parent, and so on.
+In simple words: when you click on a child element, the event first triggers on the child, then moves to the parent, then the grandparent, and so on.
 
 ---
 
-## 📌 How It Works
+### How It Works
 1. Suppose you have a `div` inside another `div`.
-2. When you click the inner `div`, the event fires on that element **first**.
-3. After that, the same event moves upward (bubbles) to the parent element.
-4. Then it continues to bubble up until it reaches the `document`.
-
+2. When you click the inner `div`, the event fires on that element **first** (target element).
+3. Then the event **bubbles up** to the parent element.
+4. It continues to bubble up until it reaches the `document`.
 ## Q4: What is Event Delegation in JavaScript? Why is it Useful?
 
 ## 📌 Definition
